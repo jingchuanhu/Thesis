@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Thesis</string>
+    <string name="location">定位</string>
+    <string name="title">手机安全漏洞</string>
+    <string name="title_activity_aidl_client">AidlClientActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
