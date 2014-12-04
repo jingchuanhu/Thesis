@@ -3,7 +3,7 @@
 
     <string name="app_name">AidlServer</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Aidl server</string>
     <string name="action_settings">Settings</string>
 
 </resources>

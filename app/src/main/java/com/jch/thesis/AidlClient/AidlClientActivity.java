@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.jch.aidlserver.IRemote;
 import com.jch.thesis.R;
 
 public class AidlClientActivity extends Activity {
@@ -38,6 +39,7 @@ public class AidlClientActivity extends Activity {
     private void initConnection() {
 
         mServiceConnection = new ServiceConnection() {
+
             @Override
             public void onServiceConnected(ComponentName name, IBinder service) {
 
@@ -93,4 +95,6 @@ public class AidlClientActivity extends Activity {
             }
         });
     }
+
+
 }

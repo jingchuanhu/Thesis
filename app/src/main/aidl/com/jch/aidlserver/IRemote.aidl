@@ -1,5 +1,5 @@
 // IRemote.aidl
-package com.jch.thesis.AidlClient;
+package com.jch.aidlserver;
 
 // Declare any non-default types here with import statements
 
