@@ -17,8 +17,9 @@ import android.widget.Toast;
 
 import com.jch.aidlserver.IRemote;
 import com.jch.thesis.R;
+import com.jch.thesis.location.LocationUtil;
 
-public class AidlClientActivity extends Activity {
+public class AidlClientActivity extends Activity implements LocationUtil.LocalBack {
 
     private IRemote mService = null;
     private ServiceConnection mServiceConnection = null;
@@ -26,6 +27,8 @@ public class AidlClientActivity extends Activity {
     private EditText firstValue;
     private EditText secondValue;
     private Button add;
+
+    private LocationUtil locationUtil = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +72,9 @@ public class AidlClientActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         unbindService(mServiceConnection);
+        if (locationUtil != null) {
+            locationUtil.stopLocationClient();
+        }
     }
 
     private void initialize() {
@@ -76,6 +82,8 @@ public class AidlClientActivity extends Activity {
         resultText = (TextView) findViewById(R.id.resultText);
         firstValue = (EditText) findViewById(R.id.firstValue);
         secondValue = (EditText) findViewById(R.id.secondValue);
+        locationUtil = new LocationUtil(this, this);
+
         add = (Button) findViewById(R.id.add);
 
         add.setOnClickListener(new View.OnClickListener() {
@@ -97,4 +105,12 @@ public class AidlClientActivity extends Activity {
     }
 
 
+    @Override
+    public void getLocal(String localInfo) {
+        try {
+            mService.sendLocal(localInfo);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+    }
 }
