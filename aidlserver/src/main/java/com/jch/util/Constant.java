@@ -5,7 +5,7 @@ package com.jch.util;
  */
 public class Constant {
     //局域网连接地址
-    public static final String HTTP_URL = "http://192.168.1.138:8080/MyTest/servlet/MyServlet";
+    public static final String HTTP_URL = "http://192.168.1.122:8080/MyTest/servlet/MyServlet";
     public static final String LOG_NAME = "Local service";
 
 }
