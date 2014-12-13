@@ -1,1 +1,1 @@
-include ':app', ':aidlserver'
+include ':app', ':aidlserver', ':scrolltest', ':mysharesdk'

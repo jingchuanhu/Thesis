@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.1"
+
+    defaultConfig {
+        applicationId "com.jch.mysharesdk"
+        minSdkVersion 8
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:21.0.2'
+    compile files('libs/mframework.jar')
+    compile files('libs/ShareSDK-Core-2.5.4.jar')
+    compile files('libs/ShareSDK-QQ-2.5.4.jar')
+    compile files('libs/ShareSDK-QZone-2.5.4.jar')
+    compile files('libs/ShareSDK-SinaWeibo-2.5.4.jar')
+    compile files('libs/ShareSDK-Wechat-2.5.4.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.5.4.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.5.4.jar')
+}

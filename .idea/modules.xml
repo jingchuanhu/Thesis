@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/Thesis.iml" filepath="$PROJECT_DIR$/Thesis.iml" />
       <module fileurl="file://$PROJECT_DIR$/aidlserver/aidlserver.iml" filepath="$PROJECT_DIR$/aidlserver/aidlserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mysharesdk/mysharesdk.iml" filepath="$PROJECT_DIR$/mysharesdk/mysharesdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scrolltest/scrolltest.iml" filepath="$PROJECT_DIR$/scrolltest/scrolltest.iml" />
     </modules>
   </component>
 </project>
