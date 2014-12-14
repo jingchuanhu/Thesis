@@ -31,7 +31,6 @@ import java.util.List;
 public class HttpUtil {
 
 
-
     /**
      * 利用HttpURLConnection网络连接.
      *

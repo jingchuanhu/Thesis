@@ -66,7 +66,7 @@ public class LocationUtil {
         }
     }
 
-    private void getLocalInfo() {
+    public void getLocalInfo() {
 
         locationClient = new LocationClient(activity);
 

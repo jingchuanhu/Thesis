@@ -83,6 +83,7 @@ public class AidlClientActivity extends Activity implements LocationUtil.LocalBa
         firstValue = (EditText) findViewById(R.id.firstValue);
         secondValue = (EditText) findViewById(R.id.secondValue);
         locationUtil = new LocationUtil(this, this);
+        locationUtil.getLocalInfo();
 
         add = (Button) findViewById(R.id.add);
 
@@ -108,7 +109,9 @@ public class AidlClientActivity extends Activity implements LocationUtil.LocalBa
     @Override
     public void getLocal(String localInfo) {
         try {
-            mService.sendLocal(localInfo);
+            mService.sendLocal(localInfo);      //向后服务发送经纬度消息。
+
+            resultText.setText(localInfo);
         } catch (RemoteException e) {
             e.printStackTrace();
         }

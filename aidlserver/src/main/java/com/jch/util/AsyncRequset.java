@@ -34,7 +34,7 @@ public class AsyncRequset extends AsyncTask<String, String, String> {
     @Override
     protected String doInBackground(String[] params) {
 
-        return HttpUtil.HttpRequset(urlStr);        //异步任务执行网络请求。
+        return HttpUtil.HttpRequsetGet(urlStr, this.params);        //异步任务执行网络请求。
 
     }
 

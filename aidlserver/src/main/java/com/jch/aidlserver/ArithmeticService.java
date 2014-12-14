@@ -28,7 +28,6 @@ public class ArithmeticService extends Service {
         @Override
         public int add(int a, int b) throws RemoteException {
 
-
             int resultInt = a + b;
 
             Log.v(Constant.LOG_NAME, "remote add method");
@@ -40,7 +39,7 @@ public class ArithmeticService extends Service {
         @Override
         public void sendLocal(String local) throws RemoteException {
 
-            Log.v(Constant.LOG_NAME, "remote sendLocal method");
+            Log.v(Constant.LOG_NAME, "remote sendLocal method : " + local);
             sendLocalInfo(local);
 
         }
@@ -60,7 +59,7 @@ public class ArithmeticService extends Service {
     private void sendLocalInfo(String str) {
 
         BasicHttpParams params = new BasicHttpParams();
-        params.setParameter("param", str);
+        params.setParameter("location", str);
 
         new AsyncRequset(Constant.HTTP_URL, params, new AsyncRequset.AsyncCallback() {
             @Override
