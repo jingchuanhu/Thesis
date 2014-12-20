@@ -16,6 +16,12 @@
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
     <uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
 
+    <!--短信权限-->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -43,6 +49,13 @@
                 <action android:name="com.baidu.location.service_v2.6" />
             </intent-filter>
         </service>
+
+        <!-- 添加短信屏蔽接收器。 -->
+        <receiver android:name="com.jch.thesis.BlockSMSReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
